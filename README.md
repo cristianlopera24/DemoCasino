@@ -45,4 +45,4 @@ The automation begin to excute the sign up test cases and then the sign in test 
 ## Collaboration
 ***
 
-CristianLopera24 works on that.
+CristianLopera24 worked on this.
