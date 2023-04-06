@@ -1,3 +1,6 @@
+/**
+ * Locators sign up page Demo Casino
+ */
 class SignUpPage {
   elements = {
     titleSignUp: () =>
@@ -20,30 +23,54 @@ class SignUpPage {
     CreateAccountButton: () => cy.get('button[type="submit"]'),
   };
 
+  /**
+   * Fill your email into the sign up page
+   * @param {String} email - Alphanumeric email
+   */
   typeEmail(email) {
     this.elements.EmailInput().type(email);
   }
 
+  /**
+   * Click on accept conditions 
+   */
   ClickAcceptConditionsCheckBox() {
     this.elements.AcceptConditionsCheckBox().click();
   }
 
+  /**
+   * Validate if USD is for default
+   */
   VerifyCurrencyUsd() {
     this.elements.CurrencyUsd().should("have.text", "USD");
   }
 
+  /**
+   * Fill your password into the sign up page
+   * @param {String} password - Alphanumeric Password
+   */
   TypePasswordInput(password) {
     this.elements.PasswordInput().type(password);
   }
 
+  /**
+   * Fill your password confirmation into the sign up page
+   * @param {String} password - Alphanumeric Password
+   */
   TypePasswordConfirmationInput(password) {
     this.elements.PasswordConfirmationInput().type(password);
   }
 
+  /**
+   * Select no bonus code option
+   */
   SelectRadioButtonNoBonusCode() {
     this.elements.RadioButtonNoBonusCode().click();
   }
 
+  /**
+   * Click on create account button
+   */
   ClickCreateAccountButton() {
     this.elements.CreateAccountButton().click();
   }

@@ -11,11 +11,17 @@ const password = faker.internet.password();
 const emailRegistered = "testdemocasino@gmail.com";
 const passwordUserRegistered = "Test123456";
 
+/**
+ * Describe to group test cases
+ */
 describe("Test Demo Casino", () => {
   beforeEach(() => {
     cy.visit("https://demo.casino/");
   });
 
+  /**
+   * function to sign up
+   */
   it("User Sign Up", () => {
     HomePageCy.GotItValidationButton();
     HomePageCy.ClickGotItButton();
@@ -32,6 +38,9 @@ describe("Test Demo Casino", () => {
     RegistrationSuccessfullyCy.VerifyRegistrationSuccessfully();
   });
 
+  /**
+   * function to sign in
+   */
   it("User Sign In", () => {
     HomePageCy.GotItValidationButton();
     HomePageCy.ClickGotItButton();
